@@ -19,5 +19,3 @@ var twoSum = function(nums, target) {
   }
   return [pointer1, pointer2];
 };
-
-console.log(twoSum([2,7,11,15], 9));
