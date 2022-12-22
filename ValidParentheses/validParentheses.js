@@ -12,5 +12,20 @@ Every close bracket has a corresponding open bracket of the same type.
 */
 
 var isValid = function(s) {
+  let stack = []; // unshift to add, shift to remove
 
+  for(let i = 0; i < s.length; i++) {
+    if(s[i] === '(') {
+      stack.unshift(')');
+    } else if(s[i] === '{') {
+      stack.unshift('}');
+    } else if(s[i] === '[') {
+      stack.unshift(']')
+    } else {
+      if(s[i] !== stack.shift()) return false;
+    }
+  }
+  return stack.length === 0;
 };
+
+console.log(isValid('()[]}'));
