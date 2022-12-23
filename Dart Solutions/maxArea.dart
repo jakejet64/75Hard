@@ -1,7 +1,7 @@
 import 'dart:math';
 
 void main(List<String> arguments) {
-  print(maxArea([1,8,6,2,5,4,8,3,7]));
+  print(maxArea([1,8,6,2,5,4,8,3]));
 }
 
 int maxArea(List<int> height) {
