@@ -18,6 +18,13 @@ if it is in nums, or -1 if it is not in nums.
 You must write an algorithm with O(log n) runtime complexity.
 */
 
-var search = function(nums, target) {
+void main(List<String> arguments) {
+  Solution s = new Solution();
+  //print(s.search('FILL ME IN'));
+}
 
-};
+class Solution {
+  int search(List<int> nums, int target) {
+    return 0;
+  }
+}
