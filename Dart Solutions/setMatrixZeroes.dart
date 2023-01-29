@@ -42,5 +42,30 @@ void main(List<String> arguments) {
 class Solution {
   void setZeroes(List<List<int>> matrix) {
 
+    List<bool> rows = List.filled(matrix.length, false);
+    List<bool> cols = List.filled(matrix[0].length, false);
+
+    for(int row = 0; row < rows.length; row++) {
+      for(int col = 0; col < cols.length; col++) {
+        if(matrix[row][col] == 0) {
+          rows[row] = true;
+          cols[col] = true;
+        }
+      }
+    }
+
+    for(int row = 0; row < rows.length; row++) {
+      if(rows[row]) {
+        for(int col = 0; col < cols.length; col++) {
+          matrix[row][col] = 0;
+        }
+      } else {
+        for(int col = 0; col < cols.length; col++) {
+          if(cols[col]) {
+            matrix[row][col] = 0;
+          }
+        }
+      }
+    }
   }
 }
